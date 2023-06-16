@@ -1,0 +1,70 @@
+.header-container {
+    color:var(--white);
+    height:var(--header-height);
+    background-color: var(--black);
+    position:fixed;
+    width:100%;
+    top:0;
+    padding:0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ }
+ .header-light{
+   background-color: var(--blueLight);
+ }
+ .logo{
+    color: var(--white);
+    font-size: 2rem;
+    font-weight:bold;
+ }
+ .header-buttons-container{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    
+ }
+ 
+.theme-buttons{
+    background-color: var(--white);
+    border-radius:20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border:solid 1px var(--grey);
+}
+.theme-icon{
+    font-size: 24px;
+    border-radius:50%;
+    cursor:pointer;  
+    padding:5px;
+    color: black;
+}
+.theme-icon-active{
+    background-color: var(--grey);
+    padding:0;
+    color: yellow;
+}
+
+
+.navbar{
+    display: flex;
+    gap: 20px;
+    
+}
+.nav{
+    color: var(--white);
+    font-size: 16px;
+    position: relative;
+    display: flex;
+    gap: 5px;
+    
+    
+}
+
+.heart-icon, .mail-icon{
+    font-size: 16px;
+    margin: 2px 0 0 9px;
+    
+}
+
