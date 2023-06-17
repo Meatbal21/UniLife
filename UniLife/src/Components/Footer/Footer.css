@@ -1,0 +1,30 @@
+.footer-container{
+    height: 60px;
+    background-color: var(--black);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    font-size: 14px;
+}
+
+.left-footer-container{
+    display: flex;
+    gap: 20px;
+}
+
+.right-footer-container{
+    display: flex;
+    gap: 20px;
+}
+
+.copy-container{
+    display: flex;
+}
+
+.c-icon{
+    margin-top: 0px;
+    height: 16px;
+    width: 16px;
+}

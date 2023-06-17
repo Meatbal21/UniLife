@@ -1,0 +1,58 @@
+.banner-container{
+    min-height: 40vh;
+    background-color: var(--blueLight);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.left-banner-container{
+    width: 40%;
+    min-height: 30vh;
+    row-gap: 20px;
+    padding: 20px;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+    
+}
+
+.left-banner-container h3, .right-banner-container h3{
+    font-weight: bolder;
+    font-size: 36px;
+}
+
+
+.email-input{
+    width: 85%;
+    border: none;
+    border-radius: 8px;
+    padding: 8px;
+    
+}
+
+
+.right-banner-container{
+    display: flex;
+    row-gap: 40px;
+    flex-direction: column;
+    width: 50%;
+    min-height: 30vh;
+    padding: 0px 20px;
+    background-color: rebeccapurple;
+}
+
+.media-container{
+    ;
+}
+
+
+
+
+
+.media-icon{
+}
