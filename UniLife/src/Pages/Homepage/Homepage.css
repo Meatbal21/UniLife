@@ -1,6 +1,43 @@
 .homepage-container{
-    margin-top: var(--header-height);
     color: var(--black);
     min-height: 100vh;
     padding-bottom: 20px;
+    
+}
+
+.banner{
+    background-image: url("../../assets/cover-img.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 60vh;
+    position: relative;
+    z-index: 0;
+}
+
+.banner::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(29, 28, 28, 0.5); 
+    z-index:-1;
+}
+
+.homepage-banner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.banner-logo{
+    color: var(--white);
+}
+
+.banner-logo h1{
+    font-size: 64px;
 }
