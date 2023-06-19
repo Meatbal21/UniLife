@@ -1,0 +1,87 @@
+.homepage-container{
+    color: var(--black);
+    min-height: 100vh;
+    padding-bottom: 20px;
+    
+}
+
+.banner{
+    background-image: url("../../assets/cover-img.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 60vh;
+    position: relative;
+    z-index: 0;
+}
+
+.banner::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(29, 28, 28, 0.5); 
+    z-index:-1;
+}
+
+.homepage-banner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    
+}
+
+.banner-logo{
+    color: var(--white);
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+}
+
+.banner-logo h1{
+    font-size: 64px;
+}
+
+.banner-logo p{
+    font-size: 24px;
+}
+
+.banner-search{
+    width: 80%;
+    background-color: var(--white);
+    padding: 20px 50px;
+    top: 340px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 5px 8px 5px -5px rgba(0,0,0,0.47);
+
+}
+
+.search-bar{
+    width: 60%;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid var(--lightGrey);
+}
+
+.banner-search button{
+    background-color: var(--bluePurple);
+    width: 30%;
+    font-size: 20px;
+    color: var(--white);
+    padding: 8px 3px; 
+    border: none;
+    border-radius: 10px;
+
+}

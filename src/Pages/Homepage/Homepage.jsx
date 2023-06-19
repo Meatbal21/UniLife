@@ -1,17 +1,10 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './Homepage.css'
-import cover from '../../assets/cover-img.png'
+
 
 function Homepage() {
-    //styling background banner
-    const bannerStyle = {
-      backgroundImage: `url("${cover}")`,
-      backgroundSize: 'cover',
-      backgroundPosition: "center",
-      backgroundRepeat: 'no-repeat',
-      height: "60vh",
-      position: 'relative'
-    }
+  //create state for city
+  const [city, setCity] = useState([])
 
     
 
@@ -27,10 +20,15 @@ function Homepage() {
             <p>A simple and faster way to search for student accomodation</p>
           </div>
           <div className='banner-search'>
-            <input placeholder='Search City'  />
+            <input placeholder='Search City' className='search-bar'/>
             <button>Find Homes</button>
           </div>
         </div>
+      </div>
+
+      <div className='card-container'>
+        <h2>Student accommodations in our top cities</h2>
+        <div className='card-detail'></div>
       </div>
 
     </div>

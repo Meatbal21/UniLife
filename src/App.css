@@ -15,7 +15,8 @@
   --white:#fff; 
   --black:#000; 
   --grey:#2D2D2D;
-  --lightGrey:rgba(255, 255, 255, 0.6);
+  --lightGrey:rgba(136, 132, 132, 0.229);
+  --bluePurple: #3A5295;
   --header-height:70px;
 
 }
