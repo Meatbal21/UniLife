@@ -1,0 +1,26 @@
+.cityname-card{
+    margin:10px;
+    width:320px;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding:10px;
+    border-radius:8px;
+    box-shadow: 7px 8px 13px -4px rgba(0,0,0,0.47);
+    -webkit-box-shadow: 7px 8px 13px -4px rgba(0,0,0,0.47);
+    -moz-box-shadow: 7px 8px 13px -4px rgba(0,0,0,0.47);
+    border: 1px solid var(--lightGrey);
+    color: var(--black);
+    position: relative;
+    transition: all 0.3s;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.cityname-card:hover{
+    background-color: var(--bluePurple);
+    color: var(--white);
+}
+

@@ -1,0 +1,63 @@
+.propcard{
+    margin:20px;
+    width:400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom:10px;
+    border-radius:8px;
+    box-shadow: 7px 8px 13px -4px rgba(0,0,0,0.47);
+    -webkit-box-shadow: 7px 8px 13px -4px rgba(0,0,0,0.47);
+    -moz-box-shadow: 7px 8px 13px -4px rgba(0,0,0,0.47);
+    background-color: white;
+    color: black;
+    position: relative;
+    border-color: var(--lightGrey);
+    row-gap: 20px;
+}
+
+.propcard img{
+    width:100%;
+    margin-bottom:10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+
+.propcard-info{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+    margin-top: -32px;
+    background-color: var(--bluePurple);
+    color: var(--white);
+}
+
+.propcard-room{
+    display: flex;
+    align-items: center;
+}
+
+.prop-furnish{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.prop-address{
+    width: 90%;
+
+    
+}
+
+.propcard button{
+    position: relative;
+    top: 10px;
+    width: 100%;
+    height: 30px;
+    background-color: transparent;
+    border: 1px solid var(--lightGrey);
+    border-radius: 0 0 8px 8px;
+}

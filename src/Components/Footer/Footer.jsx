@@ -1,6 +1,6 @@
 import React from 'react'
 import './Footer.css'
-import {MdOutlineCopyright} from 'react-icons/Md'
+import {MdOutlineCopyright} from 'react-icons/md'
 
 function Footer() {
   return (
