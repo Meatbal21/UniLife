@@ -23,6 +23,7 @@ function CityCard({city}) {
     <div className='cities-card' style={cardStyle}>
       <p>{city?.name}</p>
       <p>{city?.property_count} properties</p>
+      
 
     </div>
     </Link>

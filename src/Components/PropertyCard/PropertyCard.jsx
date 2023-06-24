@@ -1,6 +1,7 @@
 import React from 'react'
 import './PropertyCard.css'
-import {MdOutlineBed, MdOutlineBathtub, MdOutlineHome} from 'react-icons/md'
+import {MdOutlineBed, MdOutlineBathtub, MdOutlineHome, MdOutlinePinDrop} from 'react-icons/md'
+import { Link } from 'react-router-dom'
 
 
 function PropertyCard({citydetail}) {
@@ -12,23 +13,26 @@ function PropertyCard({citydetail}) {
         <img src={citydetail?.images[0]}/>
         <div className='propcard-info'>
             <div className='propcard-price'>
-                <p>{citydetail?.bedroom_prices.bedroom_one}</p>
+                <p>$ {citydetail?.rent}</p>
                 <p>pppw include bills</p>
             </div>
             <div className='propcard-room'> 
-            <p><MdOutlineBed/>{citydetail?.bedroom_count}</p>
-            <p><MdOutlineBathtub/>{citydetail?.bathroom_count}</p>
+            <p><MdOutlineBed className='prop-icon'/>{citydetail?.bedroom_count}</p>
+            <p><MdOutlineBathtub className='prop-icon'/>{citydetail?.bathroom_count}</p>
             </div>
 
 
         </div>
         <div className='prop-furnish'>
-            <p>Detached</p>
+            <p>{citydetail?.property_type}</p>
             <p>{citydetail?.furnished}</p>
         </div>
-        <p className='prop-address'>{citydetail?.address.street}, {citydetail?.address.city}, {citydetail?.address.postcode}</p>
-        <button><MdOutlineHome />View Home</button>
+        <p className='prop-address'><MdOutlinePinDrop className='prop-icon'/>  {citydetail?.address.street}, {citydetail?.address.city}, {citydetail?.address.postcode}</p>
+        <Link to={`/propertydetails/${citydetail?._id}`}><button><MdOutlineHome className='prop-icon'/>View Home</button></Link>
+        
     </div>
+
+    
   )
 }
 

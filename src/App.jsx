@@ -8,6 +8,7 @@ import Footer from './Components/Footer/Footer'
 import Banner from './Components/BannerBottom/Banner'
 import CitySearch from './Pages/CitySearch/CitySearch'
 import CityDetails from './Pages/CItyDetails/CityDetails'
+import PropertyDetail from './Pages/PropertyDetail/Propertydetail'
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <Route path='/' element={<Homepage baseUrl={baseUrl} />}/>
       <Route path='/citysearch' element={<CitySearch baseUrl={baseUrl}/>}/>
       <Route path='/citydetails/:cityId' element={<CityDetails baseUrl={baseUrl}/>}/>
+      <Route path='/propertydetails/:propertyId' element={<PropertyDetail baseUrl={baseUrl}/>}/>
     </Routes>
     <Banner />
     <Footer />

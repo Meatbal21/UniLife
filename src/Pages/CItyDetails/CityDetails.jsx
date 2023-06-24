@@ -4,7 +4,8 @@ import axios from 'axios'
 import { useParams } from 'react-router-dom'
 import PropertyCard from '../../Components/PropertyCard/PropertyCard'
 
-function CityDetails({baseUrl, allcity}) {
+
+function CityDetails({baseUrl},{allcity}) {
     //show data for a specific city
     //the id is in the url
     //use hook to retrieve the value with same id and capital
@@ -13,8 +14,6 @@ function CityDetails({baseUrl, allcity}) {
     //create state to hold city details
     const [cityDetails, setCityDetails] = React.useState([])
 
-    //create state to hold selected city
-    const [selectCity, setSelectCity] = React.useState('')
 
     //calling api
     useEffect(
@@ -25,8 +24,7 @@ function CityDetails({baseUrl, allcity}) {
                 console.log(res.data.response)
                 //store data 
                 setCityDetails(res.data.response)
-                //store data
-                setSelectCity(res.data.response)
+                
             })
             .catch(err=>console.log(err))
         },[] //run when page loaded
@@ -52,17 +50,26 @@ function CityDetails({baseUrl, allcity}) {
         
       </div>
       <div className='property-container'>
-      <h2>Home in {selectCity?.length}, {}</h2>
+      <h2>{cityDetails?.length} Home in {cityDetails[0]?.address.city}</h2>
         <div className='property-card'>
           {
             //set up for card
             cityDetails.map(item=><PropertyCard 
                         key={item._id}
-                        citydetail={item}/>)
+                        citydetail={item}
+                        />)
 
 
           }
         </div>
+      </div>
+
+      <div className='banner-city'>
+          <div className='city-info'>
+            <h3>Being a student in {cityDetails[0]?.address.city}</h3>
+            <p>{allcity?.name}</p>
+            
+          </div>
       </div>
     </div>
   )
