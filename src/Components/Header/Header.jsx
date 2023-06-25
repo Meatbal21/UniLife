@@ -1,8 +1,8 @@
 import React, {useState} from 'react'
 import './Header.css'
-import {BiBuildingHouse, BiMoon, BiSun} from'react-icons/Bi';
-import {AiOutlineHeart} from 'react-icons/Ai';
-import {CiMail} from 'react-icons/Ci'
+import {BiBuildingHouse, BiMoon, BiSun} from'react-icons/bi';
+import {AiOutlineHeart} from 'react-icons/ai';
+import {CiMail} from 'react-icons/ci'
 import { Link } from 'react-router-dom'
 
 

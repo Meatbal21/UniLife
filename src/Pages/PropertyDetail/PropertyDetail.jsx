@@ -4,7 +4,7 @@ import axios from 'axios'
 import { useParams } from 'react-router-dom'
 
 
-function Propertydetail({baseUrl}) {
+function PropertyDetail({baseUrl}) {
     //show data for a specific city
     //the id is in the url
     //use hook to retrieve the value with same id and capital
@@ -47,4 +47,4 @@ function Propertydetail({baseUrl}) {
   )
 }
 
-export default Propertydetail
+export default PropertyDetail
