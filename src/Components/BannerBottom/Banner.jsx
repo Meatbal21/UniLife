@@ -1,7 +1,7 @@
 import React from 'react'
 import './Banner.css'
-import {BsFacebook, BsInstagram} from 'react-icons/Bs'
-import {AiFillTwitterCircle} from 'react-icons/Ai'
+import {BsFacebook, BsInstagram} from 'react-icons/bs'
+import {AiFillTwitterCircle} from 'react-icons/ai'
 
 function Banner() {
   return (
