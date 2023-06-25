@@ -8,7 +8,7 @@ import Footer from './Components/Footer/Footer'
 import Banner from './Components/BannerBottom/Banner'
 import CitySearch from './Pages/CitySearch/CitySearch'
 import CityDetails from './Pages/CItyDetails/CityDetails'
-import PropertyDetail from './Pages/PropertyDetail/Propertydetail'
+import PropertyDetail from './Pages/PropertyDetail/PropertyDetail'
 
 
 function App() {
