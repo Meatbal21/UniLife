@@ -93,6 +93,18 @@
 
 }
 
+.banner-search a{
+    background-color: var(--bluePurple);
+    text-align: center;
+    width: 30%;
+    font-size: 20px;
+    color: var(--white);
+    padding: 8px 3px; 
+    border: none;
+    border-radius: 10px;
+
+}
+
 
 .card-detail{
     display: flex;
@@ -175,6 +187,14 @@
     justify-content: space-between;
     align-items: center;
     width: 80%;
+}
+
+.info-container img{
+    width: 450px;
+    height: 500px;
+    position: relative;
+    bottom: -20px;
+    right: 100px;
 }
 
 .info-detail{

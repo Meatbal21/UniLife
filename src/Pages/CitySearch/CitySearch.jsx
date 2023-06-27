@@ -1,30 +1,11 @@
-import React, { useState, useEffect } from 'react'
+import React, { useContext} from 'react'
 import './CitySearch.css'
-import axios from 'axios'
+import { CityContext } from '../../Context/CityContext'
 import CityName from '../../Components/CityNameCard/CityName'
 
-function CitySearch({baseUrl}) {
-//create state for all city
-const [allCity, setAllCity] = useState([])
-
-
-  //make api call when the page load
-  //use effect
-  useEffect(
-    () =>{
-      console.log('CitySearch loaded')
-      //api call
-      axios.get(`${baseUrl}/cities?limit=20`)
-      .then(res=>{
-        console.log(res.data.response)
-        
-        //store data
-        setAllCity(res.data.response)
-      })
-      .catch(err=>console.log(err))
-
-    },[] //empty array run when page load
-  )
+function CitySearch() {
+    //create state for city
+    const {allCities} = useContext(CityContext) 
 
 
   return (
@@ -44,18 +25,16 @@ const [allCity, setAllCity] = useState([])
         <div className='city-name-card'>
           {
               //set up for card
-              allCity.map(item=><CityName 
+              allCities.map(item=><CityName 
                 key={item._id}
-                allcity={item}/>)
+                city={item}/>)
 
 
 
           }
 
 
-          
-
-            
+         
         </div>
         </div>
     </div>

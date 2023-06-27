@@ -108,3 +108,47 @@
     justify-content: center;
     width: 100%;
  }
+
+ .banner-city{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 88%;
+    min-height: 30vh;
+    background-color: var(--whiteBlue);
+    border-radius: 8px;
+
+ }
+
+.city-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    height: 40vh;
+    row-gap: 50px;
+    
+    margin: 0px 0px 20px 50px;
+}
+
+.city-info h3{
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.city-info p{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.student-banner{
+    width: 50%;
+}
+ 
+.student-banner img{
+    position: relative;
+    width: 560px;
+    height: 400px;
+    right: -30px;
+}

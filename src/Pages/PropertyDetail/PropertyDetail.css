@@ -2,3 +2,13 @@ img{
     width: 200px;
     height: 200px;
 }
+
+.property-image{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.head-image{
+    width: 100%;
+}

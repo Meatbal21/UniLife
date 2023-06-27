@@ -1,36 +1,28 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import './Homepage.css'
-import axios from 'axios'
 import CityCard from '../../Components/CityCard/CityCard'
 import {MdOutlineTravelExplore, MdRule, MdGrading, MdOutlineRadar, MdFavoriteBorder} from 'react-icons/md'
 import man from '../../assets/man.png'
 import { Link } from 'react-router-dom'
+import { CityContext } from '../../Context/CityContext'
 
 
 
-function Homepage({baseUrl}) {
+function Homepage() {
   //create state for city
-  const [cities, setCities] = useState([])
+  const {allCities, setAllCities, handleSelectChange} = useContext(CityContext) 
+  //limited list to show
+  const setCity = allCities.slice(0,9)
 
-  //make api call when the page load
-  //use effect
-  useEffect(
-    () =>{
-      console.log('homepage loaded')
-      //api call
-      axios.get(`${baseUrl}/cities?limit=9`)
-      .then(res=>{
-        console.log(res.data.response)
-        
-        //store data
-        setCities(res.data.response)
-      })
-      .catch(err=>console.log(err))
+  const [citynameId, setCityNameId] = useState('');
 
-    },[] //empty array run when page load
-  )
-    
+  function getCity(e) {
+    console.log(e.target.value);
+    setCityNameId(e.target.value);
+  }
 
+
+  
 
 
   return (
@@ -43,18 +35,30 @@ function Homepage({baseUrl}) {
             <p>A simple and faster way to search for student accomodation</p>
           </div>
           <div className='banner-search'>
-            <input placeholder='Search City' className='search-bar'/>
-            <button>Find Homes</button>
+            <select className='search-bar' name="Search by city"  onChange={getCity}>
+              <option value="">Search by city</option>
+              {
+
+                allCities.map((item)=><option  key={item._id} value={item._id} >{item.name}</option>)
+              }
+            </select>
+            {
+              citynameId !== '' ?
+              <Link to={`/citydetails/${citynameId}`}>Find Homes</Link>
+              :
+              <button type="submit" form="allCities">Find Homes</button>
+            }
           </div>
         </div>
       </div>
 
       <div className='card-container'>
         <h2>Student accommodations in our top cities</h2>
-        <div className='card-detail'>
+        <div className='card-detail' >
           {
             //set up for card
-            cities.map(item=><CityCard 
+            
+            setCity.map(item=><CityCard 
                         key={item._id}
                         city={item}/>)
 

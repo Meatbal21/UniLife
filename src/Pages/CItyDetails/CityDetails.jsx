@@ -1,15 +1,23 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useContext} from 'react'
 import './CityDetails.css'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
 import PropertyCard from '../../Components/PropertyCard/PropertyCard'
+import { CityContext } from '../../Context/CityContext'
+import student from '../../assets/student.png'
 
 
-function CityDetails({baseUrl},{allcity}) {
+
+function CityDetails({baseUrl}) {
     //show data for a specific city
     //the id is in the url
     //use hook to retrieve the value with same id and capital
     const {cityId}  = useParams()
+
+    //create state for city
+    const {allCities} = useContext(CityContext) 
+    const studentInfo = allCities.find(item=> item._id == cityId)
+
 
     //create state to hold city details
     const [cityDetails, setCityDetails] = React.useState([])
@@ -59,16 +67,21 @@ function CityDetails({baseUrl},{allcity}) {
                         citydetail={item}
                         />)
 
-
-          }
+            }
         </div>
       </div>
 
       <div className='banner-city'>
+       
           <div className='city-info'>
             <h3>Being a student in {cityDetails[0]?.address.city}</h3>
-            <p>{allcity?.name}</p>
+            <p>{studentInfo?.student_life}</p>
+            <p>{studentInfo?.universities}</p>
             
+          
+          </div>
+          <div className='student-banner'>
+            <img src={student} />
           </div>
       </div>
     </div>

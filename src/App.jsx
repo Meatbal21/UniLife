@@ -9,6 +9,7 @@ import Banner from './Components/BannerBottom/Banner'
 import CitySearch from './Pages/CitySearch/CitySearch'
 import CityDetails from './Pages/CItyDetails/CityDetails'
 import PropertyDetail from './Pages/PropertyDetail/PropertyDetail'
+import CityContextProvider from './Context/CityContext'
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
 
   return (
     <BrowserRouter>
+    <CityContextProvider >
     <ThemeContextProvider>
     <Header />
     <Routes>
@@ -27,6 +29,7 @@ function App() {
     <Banner />
     <Footer />
     </ThemeContextProvider>
+    </CityContextProvider>
     </BrowserRouter>
   )
 }

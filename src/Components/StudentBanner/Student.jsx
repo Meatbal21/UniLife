@@ -1,9 +1,16 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
+import axios from 'axios'
 
-function Student({allcity}) {
+
+function Student({}) {
+  const [studentLife, setStudentLife] = useState('')
+
+  
+
+
   return (
     <div>
-        <p>{allcity?.name}</p>
+      <p>student:</p>
     </div>
   )
 }
