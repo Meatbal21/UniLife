@@ -37,7 +37,7 @@ function PropertyDetail({baseUrl}) {
             })
             .catch(err=>console.log(err))
 
-        },[]
+        },[propertyId]
     )
 
   return (
@@ -100,20 +100,47 @@ function PropertyDetail({baseUrl}) {
             <div className='description-bedroom'>
                 <h3>Bedroom Prices</h3>
                 <div className='bedroom'>
-                <p>bedroom price  </p>
+
+                    <p>bedroom</p>
+                    {Property?.bedroom_count > 0?(
+                        <> <p>{Property?.bedroom_prices?.bedroom_one}</p>
+                        <p>{Property?.bedroom_prices?.bedroom_two}</p>
+                        <p>{Property?.bedroom_prices?.bedroom_three}</p>
+                        <p>{Property?.bedroom_prices?.bedroom_four}</p>
+                        <p>{Property?.bedroom_prices?.bedroom_five}</p>
+                        <p>{Property?.bedroom_prices?.bedroom_six}</p>
+                        <p>{Property?.bedroom_prices?.bedroom_seven}</p>
+                        <p>{Property?.bedroom_prices?.bedroom_eight}</p>
+                        <p>{Property?.bedroom_prices?.bedroom_nine}</p>
+                        <p>{Property?.bedroom_prices?.bedroom_ten}</p></>)
+
+                        :
+                        (<p></p>)
+                    }
+
+
+
+
                 </div>
 
             </div>  
         </div>
         <div className='feature-container'>
         <h4>Key Features</h4>
+        {Property?.key_features?.length > 0?
+        
+        (
+            
         <ul>
         <li><MdOutlineCheck />  {Property?.key_features?.[0]}</li>
         <li><MdOutlineCheck />  {Property?.key_features?.[1]}</li>
         <li><MdOutlineCheck />  {Property?.key_features?.[2]}</li>
         <li><MdOutlineCheck />  {Property?.key_features?.[3]}</li>
         <li><MdOutlineCheck />  {Property?.key_features?.[4]}</li>
-        </ul>
+        </ul>)
+        :
+        (<p>  </p>)
+        }
         </div>
     </div>
   )

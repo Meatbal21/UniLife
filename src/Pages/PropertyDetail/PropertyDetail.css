@@ -147,6 +147,10 @@
     line-height: 2rem;
 }
 
+.bedroom, .bedroom p{
+    border: solid 1px var(--lightGrey);
+}
+
 .description-bedroom{
     padding-left: 30px;
     display: flex;
