@@ -1,7 +1,19 @@
-img{
-    width: 200px;
-    height: 200px;
+.propertydetail-container{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    margin: 20px 40px;
 }
+
+
+
+.property-info-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
 
 .property-image{
     display: flex;
@@ -9,6 +21,145 @@ img{
     width: 50%;
 }
 
+
+.property-slider img{
+    width: 25%;
+
+    height: 200px;
+    padding: 10px;
+    border-radius: 30px;
+}
+
 .head-image{
     width: 100%;
+    min-width: 25%;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.property-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 52vh;
+    
+}
+
+.property-detail{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 90%;
+    border: 1px solid var(--lightGrey);
+    border-radius: 20px;
+}
+
+.property-detail h2{
+    width: 80%;
+    font-size: 40px;
+    font-weight: 400;
+    text-align: center;
+    border-bottom: 1px solid var(--lightGrey);
+    padding: 50px 0;
+    margin: auto;
+    
+    
+}
+
+.property-detail table{
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    
+}
+
+.table-header, .table-data{
+    height: 20px;
+}
+
+
+
+.property-detail th{
+    width: 30%;
+    font-size: 18px;
+    text-align: center;
+    
+}
+
+.property-detail td{
+    width: 30%;
+    color: var(--bluePurple);
+    font-size: 34px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.button-container{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-top: 10px;
+    
+
+}
+
+.button-container button{
+    width: 48%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+}
+
+.button-container :nth-child(1){
+    background-color: var(--lightGrey);
+}
+
+.button-container :nth-child(2){
+    background-color: var(--bluePurple);
+    color: var(--white);
+}
+
+.description-container{
+    margin-top: 50px;
+    display: flex;
+}
+
+
+.description-detail{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 30vh;
+    padding-right: 50px;
+}
+
+.description-detail h3, .description-bedroom h3, .feature-container h4{
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.description-detail p{
+    font-size: 20px;
+    line-height: 2rem;
+}
+
+.description-bedroom{
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.feature-container{
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.feature-container li{
+    margin: 40px 0px;
+    list-style-type: none;
+    font-size: 20px;
 }
