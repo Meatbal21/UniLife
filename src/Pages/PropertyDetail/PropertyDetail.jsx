@@ -103,7 +103,7 @@ function PropertyDetail({baseUrl}) {
                 <div className='property-detail'>
                     <h2>{Property?.address?.street}, {Property?.address?.city}, {Property?.address?.postcode}</h2>
                     <table>
-                        
+                        <tbody>
                         <tr className='table-header'>
                             <th>Bedrooms</th>
                             <th>Bathrooms</th>
@@ -124,7 +124,7 @@ function PropertyDetail({baseUrl}) {
                             <td>{Property?.furnished}</td>
                             <td>{Property?.availability}</td>
                         </tr>
-                       
+                        </tbody>
                     </table>
 
                 </div>

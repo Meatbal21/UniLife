@@ -10,7 +10,7 @@ import { CityContext } from '../../Context/CityContext'
 
 function Homepage() {
   //create state for city
-  const {allCities, setAllCities, handleSelectChange} = useContext(CityContext) 
+  const {allCities} = useContext(CityContext) 
   //limited list to show
   const setCity = allCities.slice(0,9)
 
