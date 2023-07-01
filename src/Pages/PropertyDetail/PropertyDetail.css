@@ -2,9 +2,22 @@
     display: flex;
     flex-direction: column;
     justify-items: center;
-    margin: 20px 40px;
+    margin: 50px 40px;
+    margin-left: 50px;
 }
 
+.propertydetail-container a{    
+    font-size: 20px;
+    color: var(--black);
+    margin-left: 10px;
+
+}
+
+.arrow-icon{
+    width: 15px;
+    height: 15px;
+    color: var(--bluePurple);
+}
 
 
 .property-info-container{
@@ -24,8 +37,8 @@
 
 .property-slider img{
     width: 25%;
-
-    height: 200px;
+    
+    height: 180px;
     padding: 10px;
     border-radius: 30px;
 }
@@ -69,7 +82,7 @@
 }
 
 .property-detail table{
-    width: 90%;
+    width: 100%;
     height: 90%;
     margin: auto;
     
@@ -91,7 +104,7 @@
 .property-detail td{
     width: 30%;
     color: var(--bluePurple);
-    font-size: 34px;
+    font-size: 30px;
     font-weight: 600;
     text-align: center;
 }
@@ -113,8 +126,13 @@
     font-size: 20px;
 }
 
+.btn-icon{
+    
+}
+
 .button-container :nth-child(1){
-    background-color: var(--lightGrey);
+    background-color: var(--grey);
+    color: var(--white);
 }
 
 .button-container :nth-child(2){
@@ -147,11 +165,28 @@
     line-height: 2rem;
 }
 
-.bedroom, .bedroom p{
+.border-bedroom{
+    border-radius: 20px;
     border: solid 1px var(--lightGrey);
 }
 
+.bedroom{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    font-size: 24px;
+    font-weight: 400;
+    border-bottom: solid 1px var(--lightGrey);
+    
+    
+}
+
+
+
+
 .description-bedroom{
+    margin: 0 40px;
+    width: 50%;
     padding-left: 30px;
     display: flex;
     flex-direction: column;
@@ -160,10 +195,94 @@
 .feature-container{
     width: 100%;
     margin-bottom: 50px;
+    margin-top: 80px;
 }
 
-.feature-container li{
+.feature-container p{
     margin: 40px 0px;
     list-style-type: none;
     font-size: 20px;
+}
+
+.check-icon{
+    color: var(--bluePurple);
+}
+
+
+.modal-header-container{
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+
+
+}
+
+.modal-header-container h2{
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.modal-header-container h3{
+    font-size: 24px;
+    font-weight: 400;
+    width: 80%;
+}
+
+.add-home-icon{
+    width: 70px;
+    height: 80px;
+    position: relative;
+    align-self: first baseline;
+    color: var(--bluePurple);
+}
+
+.modal-info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-form, .modal-message{
+    width: 48%;
+    padding: 20px 20px 20px 0;
+    
+}
+
+.modal-message{
+    padding-right: 0px;
+}
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+label{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+input, textarea{
+    font-size: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid var(--lightGrey);
+    margin-bottom: 30px;
+}
+
+.modal-message button{
+    background-color: var(--bluePurple);
+    color: var(--white);
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 20px;
+    align-self: center;
+    width: 100%;
+}
+
+textarea{
+    margin-bottom: 48px;
 }

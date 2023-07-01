@@ -10,6 +10,8 @@ import CitySearch from './Pages/CitySearch/CitySearch'
 import CityDetails from './Pages/CItyDetails/CityDetails'
 import PropertyDetail from './Pages/PropertyDetail/PropertyDetail'
 import CityContextProvider from './Context/CityContext'
+import ShortListContextProvider from './Context/ShortListContext'
+import ShortList from './Pages/ShortList/ShortList'
 
 
 function App() {
@@ -19,15 +21,18 @@ function App() {
     <BrowserRouter>
     <CityContextProvider >
     <ThemeContextProvider>
+    <ShortListContextProvider>
     <Header />
     <Routes>
       <Route path='/' element={<Homepage baseUrl={baseUrl} />}/>
+      <Route path='/shortlist' element={<ShortList />}/>
       <Route path='/citysearch' element={<CitySearch baseUrl={baseUrl}/>}/>
       <Route path='/citydetails/:cityId' element={<CityDetails baseUrl={baseUrl}/>}/>
       <Route path='/propertydetails/:propertyId' element={<PropertyDetail baseUrl={baseUrl}/>}/>
     </Routes>
     <Banner />
     <Footer />
+    </ShortListContextProvider>
     </ThemeContextProvider>
     </CityContextProvider>
     </BrowserRouter>

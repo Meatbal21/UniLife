@@ -52,6 +52,13 @@
     
     
 }
+
+.navbar a{
+    text-decoration: none;
+    color: var(--white);
+}
+
+
 .nav{
     color: var(--white);
     font-size: 16px;
@@ -63,8 +70,22 @@
 }
 
 .heart-icon, .mail-icon{
-    font-size: 16px;
+    width: 15px;
+    height: 15px;
     margin: 2px 0 0 9px;
     
+}
+
+.modal-header-container h3{
+    margin-right: -6em;
+}
+
+
+#select{
+    font-size: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid var(--lightGrey);
+    margin-bottom: 30px;
 }
 

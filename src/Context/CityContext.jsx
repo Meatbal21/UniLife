@@ -28,31 +28,10 @@ export default function CityContextProvider(props) {
         },[]
     )
 
-    const searchCity = (name) =>{
-      const filterCity = allCities.filter(item=>item.name==name)
-      setAllCities(filterCity)
-    }
-  
 
-    const handleSelectChange = (e) =>{
-
-      console.log('change', e.target.value)
-      //store in state
-      setSelectedCity(e.target.value)
-    }
-
-    useEffect(
-      ()=>{
-        console.log('get episode', selectedCity)
-        //call function to get data
-        searchCity()
-    
-      }, [selectedCity] //runs when select option change
-    
-    )
 
   return (
-    <CityContext.Provider value={{allCities, setAllCities, handleSelectChange, searchCity}} >
+    <CityContext.Provider value={{allCities, setAllCities}} >
     {props.children}
     </CityContext.Provider>
   )
