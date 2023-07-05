@@ -27,7 +27,7 @@ function CityDetails({baseUrl}) {
     useEffect(
         ()=> {
             //put api call
-            axios.get(`${baseUrl}/properties/city/${cityId}`)
+            axios.get(`https://unilife-server.herokuapp.com/properties/city/${cityId}`)
             .then(res =>{
                 console.log(res.data.response)
                 //store data 

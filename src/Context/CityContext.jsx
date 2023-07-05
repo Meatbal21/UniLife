@@ -16,7 +16,7 @@ export default function CityContextProvider(props) {
 
     useEffect(
         ()=>{
-            axios.get(`${baseUrl}/cities?limit=20`)
+            axios.get(`https://unilife-server.herokuapp.com/cities?limit=20`)
             .then(res=>{
                 console.log(res.data.response)
                 setAllCities(res.data.response)

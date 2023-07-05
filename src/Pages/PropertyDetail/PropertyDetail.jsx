@@ -67,7 +67,7 @@ function PropertyDetail({baseUrl}) {
     useEffect(
         //api call
         ()=>{
-            axios.get(`${baseUrl}/properties/${propertyId}`)
+            axios.get(`https://unilife-server.herokuapp.com/properties/${propertyId}`)
             .then(res=>{
                 console.log(res.data)
                 //store data
