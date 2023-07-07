@@ -88,12 +88,12 @@ function PropertyDetail({baseUrl}) {
         <div className='property-info-container'>
             <div className='property-image'>
             
-                <img className='head-image' src={Property?.images?.[index]}/>
+                <img className='head-image' loading='lazy' src={Property?.images?.[index]}/>
                 <div className='property-slider'>
-                    <img src={Property?.images?.[1]} onClick={()=>setIndex(1)}/>
-                    <img src={Property?.images?.[2]} onClick={()=>setIndex(2)}/>
-                    <img src={Property?.images?.[3]} onClick={()=>setIndex(3)}/>
-                    <img src={Property?.images?.[0]} onClick={()=>setIndex(0)}/>
+                    <img loading='lazy' src={Property?.images?.[1]} onClick={()=>setIndex(1)}/>
+                    <img loading='lazy' src={Property?.images?.[2]} onClick={()=>setIndex(2)}/>
+                    <img loading='lazy' src={Property?.images?.[3]} onClick={()=>setIndex(3)}/>
+                    <img loading='lazy' src={Property?.images?.[0]} onClick={()=>setIndex(0)}/>
                 </div>
             
              </div>
@@ -217,7 +217,7 @@ function PropertyDetail({baseUrl}) {
 
 {
                         Object.keys(Property?.key_features?? {}).map((item,index)=>{
-                            return  <div className='' key={item}>
+                            return  <div className='feature-item' key={item}>
                                 
                                 <p><MdOutlineCheck className='check-icon'/> {Property?.key_features?.[item]} </p>
                             </div>

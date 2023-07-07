@@ -18,9 +18,9 @@ function Banner() {
       <div className='right-banner-container'>
       <h3>Let's Socialize</h3>
       <div className='media-container'>
-      <p><BsFacebook className='media-icon'/>Facebook</p>
-      <p><BsInstagram className='media-icon'/>Instagram</p>
-      <p><AiFillTwitterCircle className='media-icon'/>Twitter</p>
+      <p><BsFacebook className='media-icon'/>  Facebook</p>
+      <p><BsInstagram className='media-icon'/>  Instagram</p>
+      <p><AiFillTwitterCircle className='media-icon'/>  Twitter</p>
       </div>
 
 

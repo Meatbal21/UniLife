@@ -76,3 +76,15 @@
     position: relative;
     top: 8px;
 }
+
+@media screen and (max-width: 768px){
+    .propcard{
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 428px){
+    .propcard{
+        width: 360px;
+    }
+}

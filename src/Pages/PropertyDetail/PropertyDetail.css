@@ -126,10 +126,6 @@
     font-size: 20px;
 }
 
-.btn-icon{
-    
-}
-
 .button-container :nth-child(1){
     background-color: var(--grey);
     color: var(--white);
@@ -286,3 +282,178 @@ input, textarea{
 textarea{
     margin-bottom: 48px;
 }
+
+@media screen and (max-width: 768px){
+    .property-info-container{
+        flex-direction: column;
+    }
+    .property-image, .property-info, .property-detail, .button-container, .description-detail, .description-bedroom{
+        width: 100%;
+    }
+
+    .description-container{
+        flex-direction: column;
+    }
+
+
+    .description-bedroom{
+        margin: auto;
+        padding: 0;
+    }
+
+    .modal-header-container h2{
+        font-size: 34px;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+    
+    .modal-header-container h3{
+        font-size: 20px;
+        font-weight: 400;
+        width: 80%;
+    }
+
+    .modal-info{
+        flex-direction: column;
+    }
+    .modal-form, .modal-message{
+        width: 100%;
+    }
+
+    .modal-form{
+        padding-right: 0;
+        margin-bottom: -50px;
+    }
+    textarea, input{
+        margin-bottom: 20px;
+    }
+ }
+
+ @media screen and (max-width: 428px){
+    .propertydetail-container a{
+        font-size: 14px;
+        margin-left: 0;
+    }
+
+    .arrow-icon{
+        height: 10px;
+        width: 10px;
+    }
+
+    .property-image{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .head-image{
+        padding: 2px;
+        border-radius: 10px;
+    }
+    .property-info{
+        border: 1px solid var(--lightGrey);
+        border-radius: 20px;
+        height: 100%;
+    }
+
+    .property-detail{
+        border: none;
+    }
+    .property-slider img{
+        height: 100px;
+        padding: 2px;
+        border-radius: 8px;
+    }
+
+    .property-detail table{
+        margin-left: -10px;
+        margin-top: 20px;
+        line-height: 3;
+    }
+
+    .property-detail h2{
+        font-size: 30px;
+    }
+    
+    .table-data td{
+        font-size: 15px;
+        
+    }
+
+    .table-header th{
+        font-size: 13px;
+    }
+
+    .button-container{
+        flex-direction: column;
+        width: 100%;
+        gap: 8px;
+        margin: 40px 0 20px 0;
+    }
+
+    .button-container button{
+        width: 90%;
+        margin: auto;
+    }
+
+    .description-container{
+        height: 100%;
+    }
+
+    .description-detail{
+        height: 100%;
+        text-align: justify;
+        margin-bottom: 40px;
+    }
+    
+
+    .description-detail p{
+        width: 110%;
+        font-size: 16px;
+        margin-left: 5px;
+    }
+
+    .description-bedroom{
+        width: 100%;
+    }
+
+
+    .bedroom{
+        font-size: 20px;
+        padding: 15px;
+    }
+    .bedroom-price{
+        font-size: 18px;
+    }
+
+    .feature-container{
+        margin-top: 60px;
+    }
+
+    .feature-container p{
+        font-size: 16px;
+    }
+
+    .modal-header{
+        width: 100%;
+    }
+
+    .modal-header h2{
+        font-size:32px;
+    }
+
+    .modal-header h3{
+        font-size: 20px;
+        width: 60%;
+    }
+
+    .add-home-icon{
+        display: none;
+    }
+
+    label{
+        font-size: 18px;
+    }
+    input, textarea{
+        font-size: 16px;
+    }
+ }

@@ -1,6 +1,7 @@
 .cities-card{
     margin:10px;
-    width:300px;
+    width:20vh;
+    height: 15vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,11 +33,40 @@
 }
 
 .cities-card :nth-child(1){
-    font-size: 40px;
+    font-size: 50px;
 
 
 }
 
 .cities-card :nth-child(2){
-    font-size: 20px;
+    font-size: 30px;
 }
+
+@media screen and (max-width: 768px) {
+    .cities-card{
+       width: 30vh; 
+    }
+    .cities-card :nth-child(1){
+        font-size: 34px;
+    
+    
+    }
+  }
+  
+  @media screen and (max-width: 428px){
+    .cities-card{
+        height: 20vh;
+        width: 35vh;
+    }
+
+    .cities-card :nth-child(1){
+        font-size: 28px;
+    
+    
+    }
+    .cities-card :nth-child(2){
+        font-size: 16px;
+    
+    
+    }
+  }

@@ -10,7 +10,8 @@ function CityCard({city}) {
       backgroundSize: 'cover',
       backgroundPosition: "center",
       backgroundRepeat: 'no-repeat',
-      height: "20vh",
+      
+      
       position: 'relative',
       zIndex: "0",
     }

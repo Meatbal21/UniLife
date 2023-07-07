@@ -16,7 +16,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 60vh;
+    height: 40vh;
     position: relative;
     z-index: 0;
     width: 100%;
@@ -61,7 +61,7 @@
     font-size: 24px;
 }
 
-.banner-search{
+.banner-filter{
     width: 80%;
     background-color: var(--white);
     padding: 20px 50px;
@@ -76,23 +76,32 @@
 
 }
 
-.search-bar{
-    width: 60%;
+.search-table{
+    width: 100%;
+}
+
+.banner-filter-header th{
+    text-align: left;
+    width: 25%;
+    font-size: 24px;
+    font-weight: 500; 
+}
+
+.banner-filter-item select{
+    width: 95%;
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--grey);
     padding: 5px;
+    
     border-radius: 10px;
     border: 1px solid var(--lightGrey);
-}
-
-.banner-search button{
-    background-color: var(--bluePurple);
-    width: 30%;
-    font-size: 20px;
-    color: var(--white);
-    padding: 8px 3px; 
-    border: none;
-    border-radius: 10px;
 
 }
+
+
+
+
 
 .property-card{
     display: flex;
@@ -152,3 +161,109 @@
     height: 400px;
     right: -30px;
 }
+
+@media screen and (max-width: 768px){
+    .banner-logo{
+        width: 80%;
+    }
+    .banner-logo h1{
+        font-size: 40px;
+    }
+    .banner-logo p{
+        font-size: 20px;
+    }
+
+    .banner-filter{
+        width: 95%;
+        padding: 10px;
+    }
+
+    .search-table{
+        width: 100%;
+        padding: 0;
+    }
+
+    .banner-filter-header th{
+        font-size: 20px;
+        text-align: start;
+    }
+
+
+    .banner-city{
+        flex-direction: column;
+        
+    }
+
+    .city-info{
+        width: 80%;
+        align-items: center;
+        margin: auto;
+    }
+
+    .student-banner{
+        width: 100%;
+        margin: auto;
+    }
+
+    .student-banner img{
+        width: 85%;
+        margin-left: 18px;
+        margin-bottom: 30px;
+    }
+ }
+
+ @media screen and (max-width: 428px){
+    .banner{
+        height: 40vh;
+        margin-bottom: 70px;
+    }
+    .banner-logo{
+        width: 80%;
+        margin-top: -130px;
+    }
+    .banner-logo h1{
+        font-size: 30px;
+    }
+    .banner-logo p{
+        font-size: 16px;
+    }
+
+    .banner-filter{
+        width: 85%;
+        padding-right: 0px;
+        bottom: -100px;
+    }
+
+    .banner-filter-header th{
+        display: none;
+    }
+    .banner-filter-item {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .banner-city{
+        margin-top: 100px;
+    }
+
+    .city-info{
+        height: 100%;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    .city-info h3{
+        font-size: 30px;
+    }
+
+    .city-info p{
+        font-size: 16px;
+    }
+
+    .student-banner img{
+        margin: auto;
+        height: 80%;
+        margin-bottom: 20px;
+    }
+ }

@@ -1,5 +1,5 @@
 .banner-container{
-    min-height: 40vh;
+    height: 20vh;
     background-color: var(--blueLight);
     color: var(--white);
     display: flex;
@@ -10,10 +10,12 @@
 
 .left-banner-container{
     width: 40%;
-    min-height: 30vh;
+    height: 100%;
     row-gap: 20px;
-    padding: 0 20px;
-    margin: 0 50px;
+    
+    margin: 100px 0 0 50px;
+    
+    
     display: flex;
     flex-direction: column;
     
@@ -40,9 +42,8 @@
     row-gap: 40px;
     flex-direction: column;
     width: 50%;
-    min-height: 30vh;
-    padding: 0px 20px;
-    margin: 0 50px;
+    height: 100%;
+    margin: 100px 0 0 50px;
 }
 
 .media-container{
@@ -50,12 +51,74 @@
     flex-direction: column;
     position: relative;
     gap: 20px;
+    font-size: 24px;
 }
 
 
 .media-icon{
-    margin: 0px 30px 0px 0px;
-    width: 20px;
-    height: 20px;
+    position: relative;
+    top: 5px;
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
     
+}
+
+@media screen and (max-width: 768px){
+    .banner-container{
+        height: 28vh;
+    }
+    .right-banner-container{
+       margin: auto;
+       margin-left: 90px;
+       margin-top: 40px;
+       row-gap: 10px;
+       
+    }
+
+    .left-banner-container{
+        margin: auto;
+        width: 50%;
+        margin-left: 40px;
+        margin-top: 40px;
+    }
+    .left-banner-container p{
+        width: 90%;
+        line-height: 2;
+    }
+}
+
+@media screen and (max-width: 428px){
+    .banner-container{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .left-banner-container{
+        width: 80%;
+        margin-top: 20px;
+        margin-left: 50px;
+        padding-right: 25px;
+        text-align: start;
+    }
+
+    .left-banner-container p{
+        line-height: 2;
+        width: 85%;
+    }
+
+
+    .right-banner-container{
+        width: 80%;
+        gap: 10px;
+        margin-left: 50px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        
+        
+    }
+    .media-container{
+        gap: 10px;
+    }
 }

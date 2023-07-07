@@ -10,6 +10,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
+    animation: header-load 300ms ease-in;
  }
  .header-light{
    background-color: var(--blueLight);
@@ -49,13 +50,18 @@
 
 .navbar{
     display: flex;
-    
-    
 }
 
 .navbar a{
     text-decoration: none;
     color: var(--white);
+    align-self: center;
+    
+}
+
+.navbar a:hover, .navbar p:hover{
+    background-color: #ffffff44;
+    
 }
 
 
@@ -70,14 +76,15 @@
 }
 
 .heart-icon, .mail-icon{
-    width: 15px;
-    height: 15px;
-    margin: 2px 0 0 9px;
+    width: 18px;
+    height: 18px;
+    margin: 5px 0 0 9px;
     
 }
 
-.modal-header-container h3{
+.modal-contact-container h3{
     margin-right: -6em;
+    font-weight: 300;
 }
 
 
@@ -89,3 +96,77 @@
     margin-bottom: 30px;
 }
 
+.menu-container{
+    display: none;
+}
+
+@keyframes header-load{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 768px){
+
+    
+}
+
+
+@media screen and (max-width: 428px){
+    .menu-container{
+        display: block;
+    }
+
+    .modal-header-contact{
+        text-align: justify;
+    }
+    
+    .navbar {
+        display: none;
+    }
+
+    .hamburger-menu-open{
+        display: block;
+        position: absolute;
+        
+        height: 20vh;
+        width: 200px;
+        top: 9px;
+        right: 5px;
+        z-index: 2;
+    }
+    .hamburger-menu-open h4{
+        position: absolute;
+        top: 0px;
+        right: 0;
+        
+    }
+
+    .hamburger-menu{
+        position: absolute;
+        top: 9px;
+        right: 5px;
+    }
+
+    .nav-hamburger{
+        text-align: right;
+        margin-top: 70px;
+        background-color: var(--blueLight);
+        padding: 10px;
+        font-size: 20px;
+
+    }
+    .nav-hamburger a{
+        text-decoration: none;
+        color: var(--white);
+    }
+
+    .theme-buttons{
+        margin-left: 90px;
+    }
+
+    
+}

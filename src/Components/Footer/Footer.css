@@ -28,3 +28,21 @@
     height: 16px;
     width: 16px;
 }
+
+@media screen and (max-width: 768px){
+    .footer-container{
+        height: 100px;
+        
+    }
+    .left-footer-container{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .right-footer-container{
+        display: flex;
+        margin-bottom: 20px;
+        align-self: last baseline;
+        
+    }
+}

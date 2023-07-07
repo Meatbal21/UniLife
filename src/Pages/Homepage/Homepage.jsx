@@ -30,7 +30,7 @@ function Homepage() {
       <div className='banner' >
         <div className='homepage-banner'>
 
-          <div className='banner-logo'>
+          <div className='banner-info'>
             <h1>Find student homes with bills included</h1>
             <p>A simple and faster way to search for student accomodation</p>
           </div>
