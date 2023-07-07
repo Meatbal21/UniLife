@@ -15,7 +15,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 40vh;
+    height: 60vh;
     position: relative;
     z-index: 0;
     width: 100%;
@@ -56,7 +56,7 @@
 }
 
 .banner-info h1{
-    font-size: 64px;
+    font-size: 40px;
 }
 
 .banner-info p{
