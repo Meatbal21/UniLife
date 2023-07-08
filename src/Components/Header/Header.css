@@ -10,7 +10,9 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
-    animation: header-load 300ms ease-in;
+    animation: header-load 600ms ease-in;
+    animation-fill-mode: forwards;
+    opacity: 0;
  }
  .header-light{
    background-color: var(--blueLight);
@@ -19,6 +21,9 @@
     color: var(--white);
     font-size: 2rem;
     font-weight:bold;
+    animation: leftbanner-load 500ms ease 500ms;
+    animation-fill-mode: forwards;
+    opacity: 0;
  }
  .header-buttons-container{
     display: flex;
@@ -33,6 +38,9 @@
     justify-content: space-between;
     align-items: center;
     border:solid 1px var(--grey);
+    animation: rightbanner-load 500ms ease 500ms;
+    animation-fill-mode: forwards;
+    opacity: 0;
 }
 .theme-icon{
     font-size: 24px;
@@ -50,6 +58,9 @@
 
 .navbar{
     display: flex;
+    animation: rightbanner-load 500ms ease 500ms;
+    animation-fill-mode: forwards;
+    opacity: 0;
 }
 
 .navbar a{
@@ -103,9 +114,12 @@
 @keyframes header-load{
     0%{
         transform: translateY(-100%);
+        opacity: 0;
+        
     }
     100%{
         transform: translateY(0);
+        opacity: 1;
     }
 }
 
@@ -118,6 +132,7 @@
 @media screen and (max-width: 428px){
     .menu-container{
         display: block;
+        
     }
 
     .modal-header-contact{
@@ -131,12 +146,12 @@
     .hamburger-menu-open{
         display: block;
         position: absolute;
-        
         height: 20vh;
-        width: 200px;
+        width: 98%;
         top: 9px;
         right: 5px;
-        z-index: 2;
+        z-index: 0;
+        
     }
     .hamburger-menu-open h4{
         position: absolute;
@@ -152,16 +167,21 @@
     }
 
     .nav-hamburger{
-        text-align: right;
+        display: flex;
+        width: 100%;
         margin-top: 70px;
         background-color: var(--blueLight);
-        padding: 10px;
+        padding: 5px;
         font-size: 20px;
-
+        z-index: 1;
+        animation: rightbanner-load 600ms ease;
+        animation-fill-mode: forwards;
+        opacity: 1;
     }
     .nav-hamburger a{
         text-decoration: none;
         color: var(--white);
+        
     }
 
     .theme-buttons{

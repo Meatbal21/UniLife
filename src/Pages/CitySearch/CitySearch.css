@@ -75,6 +75,9 @@
     font-weight: 100;
     margin-bottom: 100px;
     row-gap: 30px;
+    animation: card-load 600ms ease-in 1000ms;
+    animation-fill-mode: forwards;
+    opacity: 0;
  }
 
  

@@ -6,7 +6,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    animation: homepage-load 400ms ease-in 200ms;
+    animation: homepage-load 300ms ease-in 200ms;
     animation-fill-mode: forwards;
 }
 
@@ -19,7 +19,7 @@
     position: relative;
     z-index: 0;
     width: 100%;
-    animation: banner-load 1000ms ease-in 400ms;
+    animation: banner-load 600ms ease-in 800ms;
     animation-fill-mode: forwards;
     opacity: 0;
 }
@@ -42,6 +42,7 @@
     align-items: center;
     justify-content: center;
     height: 100%;
+    
     
 }
 
@@ -80,7 +81,7 @@
 
 .search-bar{
     width: 60%;
-    padding: 5px;
+    padding: 10px;
     border-radius: 10px;
     border: 1px solid var(--lightGrey);
 }
@@ -96,13 +97,18 @@
     
 }
 
+.banner-search button:hover,.info-container button:hover, .card-container button:hover {
+    background-color: var(--black);
+    cursor: pointer;
+  }
+
 .banner-search a{
     background-color: var(--bluePurple);
     text-align: center;
     width: 30%;
-    font-size: 20px;
+    font-size: 24px;
     color: var(--white);
-    padding: 8px 3px; 
+    padding: 10px 3px; 
     border: none;
     border-radius: 10px;
 
@@ -122,9 +128,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    animation: card-load 1000ms ease-in 500ms;
+    animation: card-load 600ms ease-in 1000ms;
     animation-fill-mode: forwards;
     opacity: 0;
+    content-visibility: auto;
  }
 
  .card-container h2{
@@ -152,6 +159,10 @@
     margin-top: 50px;
     background-color: var(--whiteBlue);
     width: 80%;
+    animation: leftbanner-load 500ms ease 500ms;
+   
+    animation-fill-mode: forwards;
+    opacity: 0;
  }
 
 .ad-details{
@@ -194,6 +205,9 @@
     justify-content: space-between;
     align-items: center;
     width: 80%;
+    animation: rightbanner-load 500ms ease 500ms;
+    animation-fill-mode: forwards;
+    opacity: 0;
 }
 
 .info-container img{
@@ -323,6 +337,7 @@
   }
 
   @media screen and (max-width: 428px){
+    
     .banner-info{
         margin-bottom: 60px;
     }

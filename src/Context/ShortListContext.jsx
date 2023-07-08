@@ -11,11 +11,11 @@ export default function ShortListContextProvider(props){
         ()=>{
             console.log('context load')
             //check localstorage to initialize state
-            const storedShortlist = localStorage.getItem('Short List')
+            const storedShortlist = localStorage.getItem('ShortList')
             console.log('value is ', storedShortlist)
             if(storedShortlist){
                 //only set if there is something in localStorage
-                setFavorites(JSON.parse(storedShortlist))
+                setShortList(JSON.parse(storedShortlist))
             }
 
 

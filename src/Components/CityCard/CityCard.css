@@ -11,10 +11,12 @@
     box-shadow: 7px 8px 13px -4px rgba(0,0,0,0.47);
     -webkit-box-shadow: 7px 8px 13px -4px rgba(0,0,0,0.47);
     -moz-box-shadow: 7px 8px 13px -4px rgba(0,0,0,0.47);
-    
+   
     color: var(--white);
     position: relative;
 }
+
+
 
 
 

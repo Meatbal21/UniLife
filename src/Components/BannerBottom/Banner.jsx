@@ -11,7 +11,7 @@ function Banner() {
       <p>Curious about new offerings? 
         Sign up for our weekly newsletter 
         and stay informed.</p>
-      <input placeholder='Your email' className='email-input'/>
+      <input type='email' placeholder='Your email' className='email-input'/>
 
       </div>
 

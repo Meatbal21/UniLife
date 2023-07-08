@@ -10,7 +10,8 @@ function ShortList() {
 
 
   return (
-    <div className='shortist-container'>
+    <div className='shortlist-container'>
+        <h2>Your Saved List</h2>
         {shortlist.length >0?(
             <ul className='shortlist-header'>
                 <p>Property</p>
